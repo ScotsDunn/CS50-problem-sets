@@ -1,14 +1,16 @@
 {
   "name": "givecampus-proxy",
   "version": "1.0.0",
-  "description": "Proxy to auto-check recurring donation box",
+  "description": "Proxy to auto-check recurring donation box on GiveCampus",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.18.2",
-    "request": "^2.88.2",
-    "cheerio": "^1.0.0-rc.12"
+    "puppeteer": "^21.4.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
