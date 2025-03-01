@@ -26,4 +26,21 @@ app.get('/donate', (req, res) => {
             <script>
                 document.addEventListener("DOMContentLoaded", function() {
                     let recurCheckbox = document.getElementById("contribution_recur");
-                    let recurringGiftDiv = document.getElementById
+                    let recurringGiftDiv = document.getElementById("recurringGift");
+
+                    if (recurCheckbox && recurringGiftDiv) {
+                        recurCheckbox.checked = true;
+                        recurringGiftDiv.classList.remove("hidden");
+                    }
+                });
+            </script>
+        `);
+
+        res.send($.html());
+    });
+});
+
+// Start server
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+});
